@@ -7,7 +7,7 @@
     ],
     "background_color":"white",
     "theme_color":"#1976D2",
-    "start_url":"/",
+    "start_url":"/carpintero/",
     "display":"standalone",
     "screenshots":[
         {
