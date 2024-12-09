@@ -10,6 +10,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Search from './pages/Search';
 import Account from './pages/Account';
+import EditAccount from './pages/EditAccount';
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
       case 0: return <Home/>;
       case 1: return <Search/>;
       case 2: return <div>Vista 2</div>;
-      case 3: return <Account/>;
+      case 3: return <EditAccount/>;
       default: return <div>default</div>;
     }
   }
