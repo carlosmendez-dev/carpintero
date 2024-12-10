@@ -3,7 +3,7 @@ import axios from 'axios';
 import CardModel from '../components/CardModel';
 import "@google/model-viewer"
 
-export default function(){
+export default function Home({setTitle}){
 
   const [Modelos,setModelos] = React.useState([]);
   
@@ -13,11 +13,16 @@ export default function(){
         setModelos(response.data.models)
         console.log(response.data.models)
     })
-  },[])
+
+},[])
+
+React.useEffect(()=>{
+    setTitle("Inicio")
+},[setTitle])
 
     return (
         <div  className='flex flex-col justify-center items-center h-full'>
-            <div className='flex flex-wrap justify-center items-center gap-2 overflow-y-auto p-4 w-full'>
+            <div className='flex flex-wrap justify-center items-center gap-1 overflow-y-auto w-full p-1'>
                 {Modelos.map((models)=>(
                     <CardModel model={models}></CardModel>
                 ))}

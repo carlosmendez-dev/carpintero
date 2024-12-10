@@ -19,10 +19,10 @@ export default function BottomBar({selectedView,setView}) {
           setView(newValue);
         }}
       >
-        <BottomNavigationAction label="Home" icon={<HomeIcon />} />
-        <BottomNavigationAction label="Buscar" icon={<SearchIcon />} />
-        <BottomNavigationAction label="Favoritos" icon={<FavoriteIcon />} />
-        <BottomNavigationAction label="Cuenta" icon={<PersonIcon />} />
+        <BottomNavigationAction icon={<HomeIcon />} />
+        <BottomNavigationAction icon={<SearchIcon />} />
+        <BottomNavigationAction icon={<FavoriteIcon />} />
+        <BottomNavigationAction icon={<PersonIcon />} />
       </BottomNavigation>
     </Box>
   );

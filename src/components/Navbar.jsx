@@ -8,7 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Search } from '@mui/icons-material';
 
-export default function Navbar({setSidebarMenuOpen}) {
+export default function Navbar({setSidebarMenuOpen,title}) {
 
   const handleMenuClick = () => {
     setSidebarMenuOpen(true);
@@ -29,7 +29,7 @@ export default function Navbar({setSidebarMenuOpen}) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Carpintero
+            {title}
           </Typography>
         </Toolbar>
       </AppBar>

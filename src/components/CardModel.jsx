@@ -23,7 +23,7 @@ export default function RecipeReviewCard({model}) {
   }
 
   return (
-    <Card sx={{ maxWidth: 345 }} variant='outlined' onClick={showAlert}>
+    <Card sx={{ maxWidth: 400 }} variant='outlined' onClick={showAlert}>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
@@ -39,7 +39,7 @@ export default function RecipeReviewCard({model}) {
         subheader={
           <div className='flex justify-start items-center gap-0.5'>
             <i className='bi bi-tag text-[12px]'></i>
-        <p>{model.category}</p>
+        <p className='text-sm text-opacity-10'>{model.category}</p>
           </div>
       }
       />
