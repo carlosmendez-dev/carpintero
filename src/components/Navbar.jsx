@@ -31,7 +31,6 @@ export default function Navbar({setSidebarMenuOpen}) {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Carpintero
           </Typography>
-          <Button color="inherit"><Search></Search></Button>
         </Toolbar>
       </AppBar>
     </Box>

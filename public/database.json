@@ -1,5 +1,6 @@
 {
-    "modelos":[
-        {"id":"1","nombre":"silla"}
+    "models":[
+        {"id":"1","name":"Invierno","model":"models/winter.glb", "category":"arbol"},
+        {"id":"2","name":"Spider","model":"models/spider.glb", "category":"insecto"}
     ]
 }

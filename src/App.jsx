@@ -2,7 +2,6 @@ import './App.css'
 import * as React from "react";
 
 import SidebarMenu from './components/SidebarMenu';
-import Splashscreen from './pages/Splashscreen';
 import BottomBar from './components/BottomBar';
 import Navbar from './components/Navbar';
 
@@ -29,7 +28,7 @@ function App() {
 
   return (
     <div className='bg-slate-50 h-dvh flex flex-col'>
-    <Splashscreen></Splashscreen>
+
     <SidebarMenu open={SidebarMenuOpen} setOpen={setSidebarMenuOpen}></SidebarMenu>
     <Navbar setSidebarMenuOpen={setSidebarMenuOpen}></Navbar>
 

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import axios from 'axios';
 import CardModel from '../components/CardModel';
+import "@google/model-viewer"
 
 export default function(){
 
@@ -9,22 +10,17 @@ export default function(){
   React.useEffect(()=>{
     axios.get("database.json")
     .then((response)=>{
-        setModelos(response.data.modelos)
+        setModelos(response.data.models)
+        console.log(response.data.models)
     })
   },[])
 
     return (
         <div  className='flex flex-col justify-center items-center h-full'>
-            <div className='flex flex-wrap justify-center items-center gap-2 overflow-y-auto p-2 w-full'>
-                <CardModel></CardModel>
-                <CardModel></CardModel>
-                <CardModel></CardModel>
-                <CardModel></CardModel>
-                <CardModel></CardModel>
-                <CardModel></CardModel>
-                <CardModel></CardModel>
-                <CardModel></CardModel>
-                <CardModel></CardModel>
+            <div className='flex flex-wrap justify-center items-center gap-2 overflow-y-auto p-4 w-full'>
+                {Modelos.map((models)=>(
+                    <CardModel model={models}></CardModel>
+                ))}
             </div>
         </div>
     )
