@@ -8,16 +8,23 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
+import ExitToApp from '@mui/icons-material/ExitToApp';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import SettingsIcon from '@mui/icons-material/Settings';
 import InfoIcon from '@mui/icons-material/Info';
 
 export default function SidebarMenu({open,setOpen}) {
+  const navegate = useNavigate();
 
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
   };
+
+  const logout = () =>{
+    navegate("/carpintero/login")
+  }
 
   const DrawerList = (
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
@@ -32,6 +39,15 @@ export default function SidebarMenu({open,setOpen}) {
             </ListItemButton>
           </ListItem>
         ))}
+      </List>
+      <Divider></Divider>
+      <List>
+        <ListItem disablePadding>
+          <ListItemButton onClick={logout}>
+            <ListItemIcon><ExitToApp></ExitToApp></ListItemIcon>
+            <ListItemText>Cerrar Sesion</ListItemText>
+          </ListItemButton>
+        </ListItem>
       </List>
     </Box>
   );

@@ -15,8 +15,8 @@ export default function EditAccount({setTitle, setview}){
             <ButtonBack setView={setview} indexView={3} ></ButtonBack>
             <div className='flex flex-col justify-center items-center gap-3 w-full'>
             <Avatar sx={{height:150, width:150}}></Avatar>
-            <Button variant="outlined" startIcon={<EditIcon/>}>actualizar foto</Button>
             <div className='flex flex-col justify-center items-center gap-5 w-full p-6' >
+            <Button variant="outlined" sx={{width:"100%"}} startIcon={<EditIcon/>}>cambiar foto</Button>
             <TextField sx={{width:"100%"}} id="outlined-basic" label="Nombre" variant="outlined" />
             <TextField sx={{width:"100%"}}
             id="outlined-multiline-static"
