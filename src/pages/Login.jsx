@@ -2,11 +2,16 @@ import { Button, TextField } from "@mui/material";
 import { Link } from "react-router-dom";
 import Box  from "@mui/material/Box";
 import { useNavigate } from "react-router-dom";
+import {supabase} from "../supabase/client";
+import { useState } from "react";
 
 export default function Login(){
+    const [userEmail,SetEmail] = useState("");
+    const [userPassword,SetPassword] = useState("");
+
     const navegate = useNavigate();
 
-    const onFormSubmit = (event)=> {
+    const onFormSubmit = async  (event)=> {
         event.preventDefault()
         const metaTagColorTheme = document.querySelector("meta[name='theme-color']");
         if (metaTagColorTheme){
@@ -14,7 +19,22 @@ export default function Login(){
         }else{
             alert("no se encontro el tag")
         }
-        navegate("/carpintero/dashboard")
+
+
+        let { data, error } = await supabase.auth.signInWithPassword({
+            email: userEmail,
+            password: userPassword,
+            })
+
+            if (error){
+                alert("error");
+                return 1;
+            }
+    
+            if (data.user){
+                navegate("/carpintero/dashboard")
+            }
+
     }
 
     return (
@@ -28,8 +48,8 @@ export default function Login(){
 
                     <h6 className="text-2xl font-semibold opacity-75 mb-3">Iniciar Sesion</h6>
 
-                    <TextField label="Correo" sx={{width:"100%"}}></TextField>
-                    <TextField type="password" label="Contraseña" sx={{width:"100%"}}></TextField>
+                    <TextField label="Correo" sx={{width:"100%"}} onInput={(e)=>{SetEmail(e.target.value)}}></TextField>
+                    <TextField type="password" label="Contraseña" sx={{width:"100%"}} onInput={(e)=>{SetPassword(e.target.value)}}></TextField>
                     <Button type="submit" variant="contained" sx={{width:"100%"}}>Iniciar Sesion</Button>
                     <div className="flex flex-col items-center">
                     <p className="text-sm text-opacity-90">¿No tienes una cuenta?</p>

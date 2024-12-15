@@ -10,8 +10,23 @@ import Search from '../views/Search';
 import Account from '../views/Account';
 import EditAccount from '../views/EditAccount';
 import Liked from '../views/Liked';
+import {supabase} from "../supabase/client"
+import { useNavigate } from "react-router-dom";
 
 function Dashboard() {
+  const navegate = useNavigate();
+  React.useEffect(()=>{
+    const getUser = async ()=>{
+
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user){
+        navegate("/carpintero/login");
+      }
+      console.log(user);
+    }
+
+    getUser();
+  },[])
 
   const [selectedView,setView] = React.useState(0);
   const [SidebarMenuOpen, setSidebarMenuOpen] = React.useState(false);

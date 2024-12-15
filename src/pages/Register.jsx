@@ -2,11 +2,18 @@ import { Button, TextField } from "@mui/material";
 import { Link } from "react-router-dom";
 import Box  from "@mui/material/Box";
 import { useNavigate } from "react-router-dom";
+import {supabase} from "../supabase/client";
+import { useState } from "react";
 
 export default function Register(){
+    const [userName,SetName] = useState("");
+    const [userEmail,SetEmail] = useState("");
+    const [userPassword,SetPassword] = useState("");
+
+
     const navegate = useNavigate();
 
-    const onFormSubmit = (event)=> {
+    const onFormSubmit = async (event)=> {
         event.preventDefault()
         const metaTagColorTheme = document.querySelector("meta[name='theme-color']");
         if (metaTagColorTheme){
@@ -14,7 +21,21 @@ export default function Register(){
         }else{
             alert("no se encontro el tag")
         }
-        navegate("/carpintero/dashboard")
+
+        let { data, error } = await supabase.auth.signUp({
+            email: userEmail,
+            password: userPassword
+          })
+        
+        if (error){
+            alert("error");
+            return 1;
+        }
+
+        if (data.user){
+            navegate("/carpintero/dashboard")
+        }
+        
     }
 
     return (
@@ -28,9 +49,9 @@ export default function Register(){
 
                     <h6 className="text-2xl font-semibold opacity-75 mb-3">Crear Cuenta</h6>
 
-                    <TextField label="Nombre" sx={{width:"100%"}}></TextField>
-                    <TextField label="Correo" sx={{width:"100%"}}></TextField>
-                    <TextField type="password" label="Contraseña" sx={{width:"100%"}}></TextField>
+                    <TextField label="Nombre" sx={{width:"100%"}} onInput={(e)=>{SetName(e.target.value)}}></TextField>
+                    <TextField label="Correo" sx={{width:"100%"}} onInput={(e)=>{SetEmail(e.target.value)}}></TextField>
+                    <TextField type="password" label="Contraseña" sx={{width:"100%"}} onInput={(e)=>{SetPassword(e.target.value)}}></TextField>
                     <Button type="submit" variant="contained" sx={{width:"100%"}}>Registrarse</Button>
                     <div className="flex flex-col items-center">
                     <p className="text-sm text-opacity-90">¿Ya tienes una cuenta?</p>
