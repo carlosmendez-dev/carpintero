@@ -44,7 +44,7 @@ export default function RecipeReviewCard({model}) {
       }
       />
       <div className='bg-slate-200 flex items-center justify-center'>
-      <model-viewer src={model.model} auto-rotate></model-viewer>
+      <model-viewer src={model.model} ar auto-rotate autoplay></model-viewer>
       </div>
       <CardContent>
 
