@@ -10,10 +10,33 @@ import Search from '../views/Search';
 import Account from '../views/Account';
 import EditAccount from '../views/EditAccount';
 import Liked from '../views/Liked';
+import {BuildModel}  from "../views/BuildModel";
+import { ModelDetail } from "../views/ModelDetail";
+
 import {supabase} from "../supabase/client"
 import { useNavigate } from "react-router-dom";
+import axios from 'axios';
 
 function Dashboard() {
+
+  const [Model,setModel] = React.useState(undefined);
+
+  const [Modelos,setModelos] = React.useState([]);
+  
+  React.useEffect(()=>{
+    axios.get("database.json")
+    .then((response)=>{
+        setModelos(response.data.models)
+    })
+
+    const metaTagColorTheme = document.querySelector("meta[name='theme-color']");
+        if (metaTagColorTheme){
+            metaTagColorTheme.setAttribute("content","#1976D2");
+        }
+
+
+},[])
+
   const navegate = useNavigate();
   React.useEffect(()=>{
     const getUser = async ()=>{
@@ -22,7 +45,6 @@ function Dashboard() {
       if (!user){
         navegate("/carpintero/login");
       }
-      console.log(user);
     }
 
     getUser();
@@ -34,11 +56,13 @@ function Dashboard() {
 
   const renderView = () =>{
     switch(selectedView){
-      case 0: return <Home setTitle={setTitle}/>;
+      case 0: return <Home setTitle={setTitle} setView={setView} modelos={Modelos} setModel={setModel}/>;
       case 1: return <Search setTitle={setTitle} />;
       case 2: return <Liked setTitle={setTitle}></Liked>;
       case 3: return <Account setView={setView} setTitle={setTitle}></Account>;
       case 4: return <EditAccount setTitle={setTitle} setview={setView}></EditAccount>;
+      case 5: return <ModelDetail setTitle={setTitle} setView={setView} model={Model}></ModelDetail>;
+      case 6: return <BuildModel setTitle={setTitle} setView={setView} model={Model}></BuildModel>;
       default: return <div>default</div>;
     }
   }

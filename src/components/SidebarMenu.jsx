@@ -14,6 +14,7 @@ import { useNavigate } from 'react-router-dom';
 
 import SettingsIcon from '@mui/icons-material/Settings';
 import InfoIcon from '@mui/icons-material/Info';
+import {supabase}  from '../supabase/client';
 
 export default function SidebarMenu({open,setOpen}) {
   const navegate = useNavigate();
@@ -22,8 +23,13 @@ export default function SidebarMenu({open,setOpen}) {
     setOpen(newOpen);
   };
 
-  const logout = () =>{
-    navegate("/carpintero/login")
+  const logout = async () =>{
+    let { error } = await supabase.auth.signOut();
+    navegate("/carpintero/login");
+    const metaTagColorTheme = document.querySelector("meta[name='theme-color']");
+        if (metaTagColorTheme){
+            metaTagColorTheme.setAttribute("content","white");
+        }
   }
 
   const DrawerList = (

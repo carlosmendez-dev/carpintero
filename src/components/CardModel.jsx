@@ -10,20 +10,24 @@ import { red } from '@mui/material/colors';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import  Chip  from '@mui/material/Chip';
 import  SellIcon  from '@mui/icons-material/Sell';
+import Checkbox from '@mui/material/Checkbox';
+import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
+import Favorite from '@mui/icons-material/Favorite';
 import "@google/model-viewer"
-import { Height } from '@mui/icons-material';
 
 
-export default function RecipeReviewCard({model}) {
+export default function RecipeReviewCard({model,setView,setTitle,setModel}) {
   const [expanded, setExpanded] = React.useState(false);
 
 
   const showAlert =()=>{
-    alert("Hola Mundo")
+    setTitle("Detalles")
+    setView(5);
+    setModel(model);
   }
 
   return (
-    <Card sx={{ maxWidth: 400 }} variant='outlined' onClick={showAlert}>
+    <Card sx={{ width:"100%" }} variant='outlined'>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
@@ -31,29 +35,20 @@ export default function RecipeReviewCard({model}) {
           </Avatar>
         }
         action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
+          <div>
+             <Checkbox icon={<FavoriteBorder />} checkedIcon={<Favorite />} />
+          </div>
         }
         title={model.name}
         subheader={
           <div className='flex justify-start items-center gap-0.5'>
-            <i className='bi bi-tag text-[12px]'></i>
-        <p className='text-sm text-opacity-10'>{model.category}</p>
+        <p className='text-sm text-opacity-10 bg-gray-200 px-2 rounded-full'>{model.category}</p>
           </div>
       }
       />
-      <div className='bg-slate-200 flex items-center justify-center'>
-      <model-viewer src={model.model} ios-src={model.model}  ar auto-rotate autoplay camera-controls></model-viewer>
+      <div className='bg-slate-200 flex items-center justify-center h-[200px] w-full' onClick={showAlert}>
+      <model-viewer src={model.model} ios-src={model.model}></model-viewer>
       </div>
-      <CardContent>
-
-        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-          This impressive paella is a perfect party dish and a fun meal to cook
-          together with your guests. Add 1 cup of frozen peas along with the mussels,
-          if you like.
-        </Typography>
-      </CardContent>
       
     </Card>
   );

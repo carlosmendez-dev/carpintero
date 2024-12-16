@@ -1,7 +1,88 @@
 {
-    "models":[
-        {"id":"2","name":"Spider","model":"models/table.glb", "category":"insecto"},
-        {"id":"1","name":"Invierno","model":"models/winter.glb", "category":"arbol"},
-        {"id":"2","name":"Spider","model":"models/spider.glb", "category":"insecto"}
-    ]
+  "models": [
+    {
+      "id": "1",
+      "name": "Mesa Japonesa",
+      "duration":"5 min",
+      "description":"Mesa japonesa, Ideal para comer junto a la pareja y amigos",
+      "model": "models/table.glb",
+      "category": "decoracion",
+      "tools":[
+        "Martillo",
+        "Desarmador",
+        "Desarmador",
+        "Desarmador",
+        "Desarmador",
+        "Desarmador",
+        "Desarmador"
+      ],
+      "materials":[
+        {"name":"Madera 10cm, 1m, 10cm", "number":"1"},
+        {"name":"Madera 5cm , 5cm, 10cm", "number":"1"},
+        {"name":"Clavo 1/2", "number":"4"}      ]
+    },
+    {
+      "id": "1",
+      "name": "Mesa Japonesa",
+      "duration":"5 min",
+      "description":"Mesa japonesa, Ideal para comer junto a la pareja y amigos",
+      "model": "models/table.glb",
+      "category": "decoracion",
+      "tools":[
+        "Martillo",
+        "Desarmador",
+        "Desarmador",
+        "Desarmador",
+        "Desarmador",
+        "Desarmador",
+        "Desarmador"
+      ],
+      "materials":[
+        {"name":"Madera 10cm, 1m, 10cm", "number":"1"},
+        {"name":"Madera 5cm , 5cm, 10cm", "number":"1"},
+        {"name":"Clavo 1/2", "number":"4"}      ]
+    },
+    {
+      "id": "1",
+      "name": "Mesa Japonesa",
+      "duration":"5 min",
+      "description":"Mesa japonesa, Ideal para comer junto a la pareja y amigos",
+      "model": "models/table.glb",
+      "category": "decoracion",
+      "tools":[
+        "Martillo",
+        "Desarmador",
+        "Desarmador",
+        "Desarmador",
+        "Desarmador",
+        "Desarmador",
+        "Desarmador"
+      ],
+      "materials":[
+        {"name":"Madera 10cm, 1m, 10cm", "number":"1"},
+        {"name":"Madera 5cm , 5cm, 10cm", "number":"1"},
+        {"name":"Clavo 1/2", "number":"4"}      ]
+    },
+    {
+      "id": "1",
+      "name": "Mesa Japonesa",
+      "duration":"5 min",
+      "description":"Mesa japonesa, Ideal para comer junto a la pareja y amigos",
+      "model": "models/table.glb",
+      "category": "decoracion",
+      "tools":[
+        "Martillo",
+        "Desarmador",
+        "Desarmador",
+        "Desarmador",
+        "Desarmador",
+        "Desarmador",
+        "Desarmador"
+      ],
+      "materials":[
+        {"name":"Madera 10cm, 1m, 10cm", "number":"1"},
+        {"name":"Madera 5cm , 5cm, 10cm", "number":"1"},
+        {"name":"Clavo 1/2", "number":"4"}      ]
+    }
+  ]
 }

@@ -11,15 +11,20 @@ export default function Login(){
 
     const navegate = useNavigate();
 
+    /*React.useEffect(()=>{
+        const getUser = async ()=>{
+    
+          const { data: { user } } = await supabase.auth.getUser();
+          if (user){
+            navegate("/carpintero/dashboard");
+          }
+        }
+    
+        getUser();
+      },[])*/
+
     const onFormSubmit = async  (event)=> {
         event.preventDefault()
-        const metaTagColorTheme = document.querySelector("meta[name='theme-color']");
-        if (metaTagColorTheme){
-            metaTagColorTheme.setAttribute("content","#1976D2");
-        }else{
-            alert("no se encontro el tag")
-        }
-
 
         let { data, error } = await supabase.auth.signInWithPassword({
             email: userEmail,

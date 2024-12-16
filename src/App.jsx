@@ -10,7 +10,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/carpintero/dashboard' element={<Dashboard></Dashboard>}></Route>
-        <Route path='/carpintero/' element={<Login></Login>}></Route>
+        <Route path='/carpintero/' element={<Dashboard></Dashboard>}></Route>
         <Route path='/carpintero/login' element={<Login></Login>}></Route>
         <Route path='/carpintero/register' element={<Register></Register>}></Route>
       </Routes>
