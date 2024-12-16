@@ -2,87 +2,80 @@
   "models": [
     {
       "id": "1",
-      "name": "Mesa Japonesa",
-      "duration":"5 min",
-      "description":"Mesa japonesa, Ideal para comer junto a la pareja y amigos",
-      "model": "models/table.glb",
+      "name": "Librero",
+      "duration": "15 min",
+      "description": "¡Construye tu propio librero de pared y aprovecha al máximo tu espacio! 🛠️ Con materiales simples y un diseño fácil de seguir, podrás crear un estante práctico y elegante. 📚✨ Ideal para organizar tus libros y decoraciones con estilo. ¡Hazlo tú mismo y disfruta de un espacio más ordenado y personalizado! 🪚🏡",
+      "model": "models/mini-mueble.glb",
+      "placement": "wall",
+      "model_static": "models/static/mini-mueble.glb",
+      "preview": "images/models/mini-mueble.png",
       "category": "decoracion",
-      "tools":[
+      "tools": [
         "Martillo",
         "Desarmador",
-        "Desarmador",
-        "Desarmador",
-        "Desarmador",
-        "Desarmador",
-        "Desarmador"
+        "Nivel",
+        "Lijadora",
+        "Pincel o rodillo (si decides pintar)"
       ],
-      "materials":[
-        {"name":"Madera 10cm, 1m, 10cm", "number":"1"},
-        {"name":"Madera 5cm , 5cm, 10cm", "number":"1"},
-        {"name":"Clavo 1/2", "number":"4"}      ]
+      "materials": [
+        { "name": "Madera 10cm x 1m x 10cm", "number": "2" },
+        { "name": "Madera 5cm x 5cm x 10cm", "number": "2" },
+        { "name": "Clavos 1/2\",", "number": "12" },
+        { "name": "Tornillos de madera 3cm", "number": "8" },
+        { "name": "Pegamento para madera", "number": "1" }
+      ]
     },
     {
-      "id": "1",
-      "name": "Mesa Japonesa",
-      "duration":"5 min",
-      "description":"Mesa japonesa, Ideal para comer junto a la pareja y amigos",
-      "model": "models/table.glb",
-      "category": "decoracion",
-      "tools":[
+      "id": "2",
+      "name": "Banco",
+      "duration": "5 min",
+      "description": "¡Crea tu propio banco de madera y dale un toque único a tu hogar! 🛠️ Con materiales sencillos y pasos fáciles, podrás construir una pieza resistente y personalizada. 💪✨ Ideal para cualquier rincón, ¡y la satisfacción de hacerlo tú mismo lo hace aún mejor! 🪚🏡",
+      "model": "models/banquito.glb",
+      "placement": "floor",
+      "model_static": "models/static/banquito.glb",
+      "preview": "images/models/banquito.png",
+      "category": "Muebles",
+      "tools": [
         "Martillo",
         "Desarmador",
-        "Desarmador",
-        "Desarmador",
-        "Desarmador",
-        "Desarmador",
-        "Desarmador"
+        "Sierra",
+        "Nivel",
+        "Lijadora",
+        "Cinta métrica"
       ],
-      "materials":[
-        {"name":"Madera 10cm, 1m, 10cm", "number":"1"},
-        {"name":"Madera 5cm , 5cm, 10cm", "number":"1"},
-        {"name":"Clavo 1/2", "number":"4"}      ]
+      "materials": [
+        { "name": "Madera 10cm x 1m x 5cm", "number": "1" },
+        { "name": "Madera 5cm x 5cm x 40cm", "number": "4" },
+        { "name": "Tornillos de madera 3cm", "number": "8" },
+        { "name": "Clavos 1/2\"", "number": "8" }
+      ]
     },
     {
-      "id": "1",
-      "name": "Mesa Japonesa",
-      "duration":"5 min",
-      "description":"Mesa japonesa, Ideal para comer junto a la pareja y amigos",
-      "model": "models/table.glb",
-      "category": "decoracion",
-      "tools":[
+      "id": "3",
+      "name": "Mesa",
+      "duration": "5 min",
+      "description": "¡Construye tu propia mesa y dale un toque único a tu hogar! 🛠️ Con materiales sencillos y pasos fáciles, podrás crear una pieza funcional y personalizada. ✨ Ideal para el comedor, la oficina o cualquier rincón. ¡Hazlo tú mismo y disfruta de una mesa hecha a tu medida! 🪚🏡",
+      "model": "models/mesa.glb",
+      "placement": "floor",
+      "model_static": "models/static/mesa.glb",
+      "preview": "images/models/mesa.png",
+      "category": "Hogar",
+      "tools": [
         "Martillo",
         "Desarmador",
-        "Desarmador",
-        "Desarmador",
-        "Desarmador",
-        "Desarmador",
-        "Desarmador"
+        "Sierra",
+        "Lijadora",
+        "Cinta métrica",
+        "Nivel",
+        "Taladro (si decides usar tornillos)"
       ],
-      "materials":[
-        {"name":"Madera 10cm, 1m, 10cm", "number":"1"},
-        {"name":"Madera 5cm , 5cm, 10cm", "number":"1"},
-        {"name":"Clavo 1/2", "number":"4"}      ]
-    },
-    {
-      "id": "1",
-      "name": "Mesa Japonesa",
-      "duration":"5 min",
-      "description":"Mesa japonesa, Ideal para comer junto a la pareja y amigos",
-      "model": "models/table.glb",
-      "category": "decoracion",
-      "tools":[
-        "Martillo",
-        "Desarmador",
-        "Desarmador",
-        "Desarmador",
-        "Desarmador",
-        "Desarmador",
-        "Desarmador"
-      ],
-      "materials":[
-        {"name":"Madera 10cm, 1m, 10cm", "number":"1"},
-        {"name":"Madera 5cm , 5cm, 10cm", "number":"1"},
-        {"name":"Clavo 1/2", "number":"4"}      ]
+      "materials": [
+        { "name": "Madera 10cm x 1m x 10cm", "number": "4" },
+        { "name": "Madera 5cm x 5cm x 40cm", "number": "4" },
+        { "name": "Tornillos de madera 3cm", "number": "16" },
+        { "name": "Clavos 1/2\"", "number": "8" },
+        { "name": "Pegamento para madera", "number": "1" }
+      ]
     }
   ]
 }

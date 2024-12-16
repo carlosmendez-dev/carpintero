@@ -8,7 +8,7 @@ export default function ButtonBack({setView, indexView}) {
     }
 
   return (
-    <div className="fixed left-2 top-16">
+    <div className="fixed left-2 top-16 z-50">
     <IconButton onClick={changeView}>
       <ArrowBackIcon />
     </IconButton>

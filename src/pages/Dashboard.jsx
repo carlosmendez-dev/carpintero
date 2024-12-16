@@ -12,6 +12,7 @@ import EditAccount from '../views/EditAccount';
 import Liked from '../views/Liked';
 import {BuildModel}  from "../views/BuildModel";
 import { ModelDetail } from "../views/ModelDetail";
+import About from "../views/About";
 
 import {supabase} from "../supabase/client"
 import { useNavigate } from "react-router-dom";
@@ -63,6 +64,7 @@ function Dashboard() {
       case 4: return <EditAccount setTitle={setTitle} setview={setView}></EditAccount>;
       case 5: return <ModelDetail setTitle={setTitle} setView={setView} model={Model}></ModelDetail>;
       case 6: return <BuildModel setTitle={setTitle} setView={setView} model={Model}></BuildModel>;
+      case 7: return <About setTitle={setTitle} setView={setView}></About>;
       default: return <div>default</div>;
     }
   }
@@ -70,7 +72,7 @@ function Dashboard() {
   return (
     <div className='bg-slate-50 h-dvh flex flex-col'>
 
-    <SidebarMenu open={SidebarMenuOpen} setOpen={setSidebarMenuOpen}></SidebarMenu>
+    <SidebarMenu open={SidebarMenuOpen} setOpen={setSidebarMenuOpen} setView={setView}></SidebarMenu>
     <Navbar setSidebarMenuOpen={setSidebarMenuOpen} title={Title}></Navbar>
 
 

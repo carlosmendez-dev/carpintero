@@ -27,9 +27,11 @@ export function BuildModel({ setTitle, setView, model }) {
             src={model.model}
             ios-src={model.model}
             ar
-            auto-rotate
             autoplay
             camera-controls
+            camera-target="0m 0m 0m"
+            camera-orbit="90deg 70deg 16m"
+            field-of-view="20deg"
           >
              <div slot="ar-button" className="fixed bottom-[20px] w-full px-4">
               <Button variant="contained" sx={{width:"100%"}}>

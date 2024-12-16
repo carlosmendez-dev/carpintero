@@ -16,12 +16,16 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import InfoIcon from '@mui/icons-material/Info';
 import {supabase}  from '../supabase/client';
 
-export default function SidebarMenu({open,setOpen}) {
+export default function SidebarMenu({open,setOpen,setView}) {
   const navegate = useNavigate();
 
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
   };
+
+  function showAbout(){
+    setView(7)
+  }
 
   const logout = async () =>{
     let { error } = await supabase.auth.signOut();
@@ -37,7 +41,7 @@ export default function SidebarMenu({open,setOpen}) {
       <List>
         {['Ajustes',"Acerca de"].map((text, index) => (
           <ListItem key={text} disablePadding>
-            <ListItemButton>
+            <ListItemButton onClick={showAbout}>
               <ListItemIcon>
                 {index % 2 === 0 ? <SettingsIcon /> : <InfoIcon />}
               </ListItemIcon>

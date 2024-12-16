@@ -27,7 +27,7 @@ export default function RecipeReviewCard({model,setView,setTitle,setModel}) {
   }
 
   return (
-    <Card sx={{ width:"100%" }} variant='outlined'>
+    <Card sx={{ width:"95%" }} variant='outlined'>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
@@ -41,13 +41,11 @@ export default function RecipeReviewCard({model,setView,setTitle,setModel}) {
         }
         title={model.name}
         subheader={
-          <div className='flex justify-start items-center gap-0.5'>
-        <p className='text-sm text-opacity-10 bg-gray-200 px-2 rounded-full'>{model.category}</p>
-          </div>
+        <p className='text-xs'>{model.duration}</p>
       }
       />
-      <div className='bg-slate-200 flex items-center justify-center h-[200px] w-full' onClick={showAlert}>
-      <model-viewer src={model.model} ios-src={model.model}></model-viewer>
+      <div className='bg-slate-200 flex items-center justify-center h-[300px] w-full' onClick={showAlert}>
+        <img src={model.preview} alt="" />
       </div>
       
     </Card>
