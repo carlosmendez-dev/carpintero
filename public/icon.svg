@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="256"
-   height="256"
-   viewBox="0 0 512 512"
+   width="249"
+   height="249"
+   viewBox="0 0 498 498"
    version="1.1"
    id="svg1"
    xml:space="preserve"
@@ -26,8 +26,8 @@
      inkscape:document-units="px"
      showgrid="true"
      inkscape:zoom="1.5624999"
-     inkscape:cx="211.84001"
-     inkscape:cy="290.56001"
+     inkscape:cx="208.00001"
+     inkscape:cy="184.96001"
      inkscape:window-width="1920"
      inkscape:window-height="1011"
      inkscape:window-x="0"
@@ -36,8 +36,8 @@
      inkscape:current-layer="layer1"><inkscape:grid
        id="grid1"
        units="px"
-       originx="0"
-       originy="0"
+       originx="-7"
+       originy="-7"
        spacingx="1"
        spacingy="1"
        empcolor="#0099e5"
@@ -82,7 +82,8 @@
        gradientUnits="userSpaceOnUse" /></defs><g
      inkscape:label="Capa 1"
      inkscape:groupmode="layer"
-     id="layer1"><rect
+     id="layer1"
+     transform="translate(-7,-7)"><rect
        style="fill:url(#linearGradient4);fill-opacity:1;stroke:url(#linearGradient2);stroke-width:10;stroke-dasharray:none;paint-order:markers fill stroke"
        id="rect1"
        width="488"
@@ -98,4 +99,4 @@
          style="fill:#ffffff;fill-opacity:1" /></g><path
        id="rect2"
        style="fill:#ffffff;stroke-dashoffset:88;paint-order:markers fill stroke"
-       d="M 121 66 C 93.472972 66 71 88.472972 71 116 L 71 171 L 91 171 L 91 116 C 91 99.207028 104.20703 86 121 86 L 171 86 L 171 66 L 121 66 z M 341 66 L 341 86 L 391 86 C 407.79297 86 421 99.207028 421 116 L 421 171 L 441 171 L 441 116 C 441 88.472972 418.52703 66 391 66 L 341 66 z M 71 341 L 71 396 C 71 423.52703 93.472972 446 121 446 L 171 446 L 171 426 L 121 426 C 104.20703 426 91 412.79297 91 396 L 91 341 L 71 341 z M 421 341 L 421 396 C 421 412.79297 407.79297 426 391 426 L 341 426 L 341 446 L 391 446 C 418.52703 446 441 423.52703 441 396 L 441 341 L 421 341 z " /></g></svg>
+       d="M 121,66 C 93.472972,66 71,88.472972 71,116 v 55 h 20 v -55 c 0,-16.792972 13.20703,-30 30,-30 h 50 V 66 Z m 220,0 v 20 h 50 c 16.79297,0 30,13.207028 30,30 v 55 h 20 V 116 C 441,88.472972 418.52703,66 391,66 Z M 71,341 v 55 c 0,27.52703 22.472972,50 50,50 h 50 v -20 h -50 c -16.79297,0 -30,-13.20703 -30,-30 v -55 z m 350,0 v 55 c 0,16.79297 -13.20703,30 -30,30 h -50 v 20 h 50 c 27.52703,0 50,-22.47297 50,-50 v -55 z" /></g></svg>

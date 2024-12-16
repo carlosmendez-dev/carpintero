@@ -8,7 +8,9 @@ export default function Liked({setTitle}){
 
     return (
         <div className='flex flex-col justify-center items-center h-full'>
-            Hola Mundo
+            <div>
+                <h1>Aun no has guradado posts</h1>
+            </div>
         </div>
     )
 }
